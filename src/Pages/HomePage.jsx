@@ -6,8 +6,8 @@ import { Text } from "@chakra-ui/react";
 import { Input } from '@chakra-ui/react'
 import { chakra } from "@chakra-ui/react";
 import { VStack } from "@chakra-ui/react";
-import DisplayMovies from "../DisplayMovies";
-import DisplayMovies1 from "../DisplayMovies1";
+import DisplayMovies from "./DisplayMovies";
+import DisplayMovies1 from "./DisplayMovies1";
 
 const theme = extendTheme({
     breakpoints: {
@@ -153,7 +153,7 @@ const HomePage = () => {
                                 return (
                                     <VStack key={ MovieSearchCollection.imdbID } divider={
                                         <StackDivider borderColor="gray.200" />
-                                    } spacing={ 8} align="stretch">
+                                    } spacing={ 8 } align="stretch">
                                         <Box h="40px">
                                             <Text fontFamily="'DM Sans', sans-seriff" fontSize="1.5rem" fontWeight="500" > { MovieSearchCollection.Title }</Text>
                                         </Box>
