@@ -20,7 +20,7 @@ const theme = extendTheme({
 const DisplayMovies = () => {
     const [ storeMovies, setStoreMovies ] = useState("");
     const getApiData = async () => {
-        var url = 'http://www.omdbapi.com/?s=thor&apikey=5503f080'
+        var url = 'https://www.omdbapi.com/?s=thor&apikey=5503f080'
         const response = await fetch(
             url
         ).then((response) => response.json());
