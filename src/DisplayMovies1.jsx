@@ -17,10 +17,10 @@ const theme = extendTheme({
 });
 
 
-const DisplayMovies = () => {
+const DisplayMovies1 = () => {
     const [ storeMovies, setStoreMovies ] = useState("");
     const getApiData = async () => {
-        var url = 'http://www.omdbapi.com/?s=thor&apikey=5503f080'
+        var url = 'http://www.omdbapi.com/?s=star&apikey=5503f080'
         const response = await fetch(
             url
         ).then((response) => response.json());
@@ -45,7 +45,7 @@ const DisplayMovies = () => {
                     {
                         storeMovies && storeMovies.map((MovieCollection) => {
                             return (
-                                <GridItem key={ MovieCollection.imdbID } w="100%" h="300px" bgImage={ MovieCollection.Poster } bgSize="cover"
+                                <GridItem key={ MovieCollection.imdbID }  w="100%" h="300px" bgImage={ MovieCollection.Poster } bgSize="cover"
                                     bgRepeat="no-repeat" display="flex" alignItems="center" justifyContent="center">
                                     {/* <Image src={ MovieCollection.Poster }></Image> */ }
                                     <Text textAlign="center" color="white" fontFamily="'DM Sans', sans-seriff" fontSize="1.5rem" fontWeight="500" > { MovieCollection.Title }</Text>
@@ -63,4 +63,4 @@ const DisplayMovies = () => {
 
 
 
-export default DisplayMovies
+export default DisplayMovies1
